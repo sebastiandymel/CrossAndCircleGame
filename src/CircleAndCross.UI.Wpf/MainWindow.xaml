@@ -1,0 +1,41 @@
+﻿<Window
+    x:Class="CircleAndCross.UI.Wpf.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:CircleAndCross.UI.Wpf"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Window.Resources>
+        <local:NegateBoolConverter x:Key="Convert.Negate" />
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition Width="200" />
+        </Grid.ColumnDefinitions>
+        <ItemsControl ItemsSource="{Binding Items}" Style="{DynamicResource Style.Board}" />
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <ListBox
+                Margin="20"
+                IsEnabled="{Binding IsGameRunning, Converter={StaticResource Convert.Negate}}"
+                ItemsSource="{Binding Modes}"
+                SelectedItem="{Binding SelectedMode}"
+                Style="{DynamicResource Style.ModeSelector}" />
+            <Button
+                Grid.Row="1"
+                Height="30"
+                Margin="20"
+                Command="{Binding StartGameCommand}"
+                Content="Start"
+                Style="{DynamicResource Style.Button.Start}" />
+        </Grid>
+    </Grid>
+</Window>

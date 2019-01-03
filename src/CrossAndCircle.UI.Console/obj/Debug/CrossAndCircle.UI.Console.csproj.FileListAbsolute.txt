@@ -1,0 +1,10 @@
+C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\CrossAndCircle.UI.Console\bin\Debug\CrossAndCircle.UI.Console.exe.config
+C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\CrossAndCircle.UI.Console\bin\Debug\CrossAndCircle.UI.Console.exe
+C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\CrossAndCircle.UI.Console\bin\Debug\CrossAndCircle.UI.Console.pdb
+C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\CrossAndCircle.UI.Console\bin\Debug\CrossAndCircle.GameEngine.dll
+C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\CrossAndCircle.UI.Console\bin\Debug\CrossAndCircle.GameEngine.pdb
+C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\CrossAndCircle.UI.Console\obj\Debug\CrossAndCircle.UI.Console.csprojAssemblyReference.cache
+C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\CrossAndCircle.UI.Console\obj\Debug\CrossAndCircle.UI.Console.csproj.CoreCompileInputs.cache
+C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\CrossAndCircle.UI.Console\obj\Debug\CrossAndCircle.UI.Console.csproj.CopyComplete
+C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\CrossAndCircle.UI.Console\obj\Debug\CrossAndCircle.UI.Console.exe
+C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\CrossAndCircle.UI.Console\obj\Debug\CrossAndCircle.UI.Console.pdb

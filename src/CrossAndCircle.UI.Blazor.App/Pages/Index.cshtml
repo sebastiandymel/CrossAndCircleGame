@@ -7,61 +7,89 @@
 <!-- =========================================== -->
 <!-- START NEW GAME -->
 <!-- =========================================== -->
-<button class="btn btn-primary" onclick="@StartNewGame_vsComputer">PLAYER vs COMPUTER</button>
-<button class="btn btn-primary" onclick="@StartNewGame_1vs1">PLAYER vs PLAYER</button>
+<div>
+    <ul>
+        <li>
+            <input type="radio"
+                   name="mode"
+                   checked="@(selectedMode == GameMode.Player_vs_Player)"
+                   onclick="@(() => selectedMode = GameMode.Player_vs_Player)"
+                   id="a-opt" />
+            <label for="a-opt" class="label">Player vs Player</label>
+        </li>
+        <li>
+            <input type="radio"
+                   name="mode"
+                   checked="@(selectedMode == GameMode.Player_vs_Computer)"
+                   onclick="@(() => selectedMode = GameMode.Player_vs_Computer)"
+                   id="a-opt" />
+            <label for="b-opt" class="label">Player vs Computer</label>
+        </li>
+    </ul>
+    <button class="btn btn-primary" onclick="@StartNewGame">Start new game</button>
+</div>
 
-<br /><br /><br />
+
+<br /><br />
 
 <!-- =========================================== -->
 <!-- GENERATE GAME BOARD -->
 <!-- =========================================== -->
-<div>
-    @if (game != null && game.Current != null)
-    {
-        @for (int i = 0; i < game.Current.Rows.Length; i++)
-        {
-            <br />
-            @for (int j = 0; j < game.Current.Cols.Length; j++)
+@if (game != null)
+{
+    <div class="card" style="padding:10px 10px 10px 10px">
+        <div>
+            @if (game != null && game.Current != null)
             {
-                var copyi = i;
-                var copyj = j;
-
-                <button onclick="@(() => SetPosition(copyi, copyj))" class="btn btn-secondary" style="width: 50px; height:50px; margin:5px">
-                    <!-- =========================================== -->
-                    <!-- CIRCLE -->
-                    <!-- =========================================== -->
-                    @if (game.Current[i, j] == GameBoard.Player.Circle)
+                @for (int i = 0; i < game.Current.Rows.Length; i++)
+                {
+                    if (i > 0)
                     {
-                        if (IsWinningPosition(copyi, copyj))
-                        {
-                            <h1 style="font-size:40px; color:red; margin:-5px 0px 0px -4px">O</h1>
-                        }
-                        else
-                        {
-                            <h1 style="font-size:40px; margin:-5px 0px 0px -4px">O</h1>
-                        }
-
+                        <br />
                     }
-                    <!-- =========================================== -->
-                    <!-- CROSS -->
-                    <!-- =========================================== -->
-                    @if (game.Current[i, j] == GameBoard.Player.Cross)
+                    @for (int j = 0; j < game.Current.Cols.Length; j++)
                     {
-                        if (IsWinningPosition(copyi, copyj))
-                        {
-                            <h1 style="font-size:40px; color:red; margin:-4px 0px 0px -3px">X</h1>
-                        }
-                        else
-                        {
-                            <h1 style="font-size:40px; margin:-4px 0px 0px -3px">X</h1>
-                        }
+                        var copyi = i;
+                        var copyj = j;
 
+                        <button onclick="@(() => SetPosition(copyi, copyj))" class="btn btn-secondary" style="width: 50px; height:50px; margin:5px">
+                            <!-- =========================================== -->
+                            <!-- CIRCLE -->
+                            <!-- =========================================== -->
+                            @if (game.Current[i, j] == GameBoard.Player.Circle)
+                            {
+                                if (IsWinningPosition(copyi, copyj))
+                                {
+                                    <h1 style="font-size:40px; color:red; margin:-5px 0px 0px -4px">O</h1>
+                                }
+                                else
+                                {
+                                    <h1 style="font-size:40px; margin:-5px 0px 0px -4px">O</h1>
+                                }
+
+                            }
+                            <!-- =========================================== -->
+                            <!-- CROSS -->
+                            <!-- =========================================== -->
+                            @if (game.Current[i, j] == GameBoard.Player.Cross)
+                            {
+                                if (IsWinningPosition(copyi, copyj))
+                                {
+                                    <h1 style="font-size:40px; color:red; margin:-4px 0px 0px -3px">X</h1>
+                                }
+                                else
+                                {
+                                    <h1 style="font-size:40px; margin:-4px 0px 0px -3px">X</h1>
+                                }
+
+                            }
+                        </button>
                     }
-                </button>
+                }
             }
-        }
-    }
-</div>
+        </div>
+    </div>
+}
 
 <br />
 
@@ -71,11 +99,11 @@
 <div>
     @if (circleWinsGame)
     {
-        <h2>Congratulations! Circle Wins the game! :)</h2>
+        <h2>Congratulations! Circle wins the game! :)</h2>
     }
     @if (crossWinsGame)
     {
-        <h2>Congratulations! Cross Wins the game! :)</h2>
+        <h2>Congratulations! Cross wins the game! :)</h2>
     }
     @if (gameEndsWithoutWinner)
     {
@@ -89,65 +117,69 @@
 
 @functions {
 
-    private WebGame game;
-    private GameBoard.Player p1Id = GameBoard.Player.Circle;
-    private GameBoard.Player p2Id = GameBoard.Player.Cross;
-    private bool circleWinsGame;
-    private bool crossWinsGame;
-    private bool gameEndsWithoutWinner;
+private WebGame game;
+private GameBoard.Player p1Id = GameBoard.Player.Circle;
+private GameBoard.Player p2Id = GameBoard.Player.Cross;
+private bool circleWinsGame;
+private bool crossWinsGame;
+private bool gameEndsWithoutWinner;
+private List<GameMode> modes = new List<GameMode> { GameMode.Player_vs_Computer, GameMode.Player_vs_Player };
+private GameMode selectedMode;
 
-    private void StartNewGame_vsComputer()
+private void StartNewGame()
+{
+    CreateGame();
+    if (this.selectedMode == GameMode.Player_vs_Computer)
     {
-        CreateGame();
         this.game.Start(p1Id);
-        ClearFlags();
     }
-
-    private void StartNewGame_1vs1()
+    else if (this.selectedMode == GameMode.Player_vs_Player)
     {
-        CreateGame();
         this.game.Start(p1Id, p2Id);
-        ClearFlags();
     }
+    ClearFlags();
+}
+private void CreateGame()
+{
+    if (this.game == null)
+    {
+        this.game = new WebGame();
+        this.game.StateChanged += OnStateChanged;
+    }
+}
+private void ClearFlags()
+{
+    this.circleWinsGame = false;
+    this.crossWinsGame = false;
+    this.gameEndsWithoutWinner = false;
+}
+private void OnStateChanged(object sender, EventArgs ea)
+{
+    if (this.game.EndStatus.HasValue && this.game.EndStatus.Value == EndStatus.CircleWins)
+    {
+        circleWinsGame = true;
+    }
+    if (this.game.EndStatus.HasValue && this.game.EndStatus.Value == EndStatus.CrossWins)
+    {
+        crossWinsGame = true;
+    }
+    if (this.game.EndStatus.HasValue && this.game.EndStatus.Value == EndStatus.Draw)
+    {
+        gameEndsWithoutWinner = true;
+    }
+}
+void SetPosition(int i, int j)
+{
+    this.game.Move(i, j);
+}
+private bool IsWinningPosition(int x, int y)
+{
+    return this.game.WinningPositions.Any(w => w.X == x && w.Y == y);
+}
 
-    private void CreateGame()
-    {
-        if (this.game == null)
-        {
-            this.game = new WebGame();
-            this.game.StateChanged += OnStateChanged;
-        }
-    }
-
-    private void ClearFlags()
-    {
-        this.circleWinsGame = false;
-        this.crossWinsGame = false;
-        this.gameEndsWithoutWinner = false;
-    }
-
-    private void OnStateChanged(object sender, EventArgs ea)
-    {
-        if (this.game.EndStatus.HasValue && this.game.EndStatus.Value == EndStatus.CircleWins)
-        {
-            circleWinsGame = true;
-        }
-        if (this.game.EndStatus.HasValue && this.game.EndStatus.Value == EndStatus.CrossWins)
-        {
-            crossWinsGame = true;
-        }
-        if (this.game.EndStatus.HasValue && this.game.EndStatus.Value == EndStatus.Draw)
-        {
-            gameEndsWithoutWinner = true;
-        }
-    }
-
-    void SetPosition(int i, int j)
-    {
-        this.game.Move(i, j);
-    }
-    private bool IsWinningPosition(int x, int y)
-    {
-        return this.game.WinningPositions.Any(w => w.X == x && w.Y == y);
-    }
+internal enum GameMode
+{
+    Player_vs_Computer,
+    Player_vs_Player,
+}
 }

@@ -5,4 +5,4 @@ C:\Users\SEDY\.nuget\packages\microsoft.extensions.dependencyinjection\2.1.0\lib
 C:\Users\SEDY\.nuget\packages\microsoft.extensions.dependencyinjection.abstractions\2.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\SEDY\.nuget\packages\microsoft.jsinterop\0.7.0\lib\netstandard2.0\Microsoft.JSInterop.dll
 C:\Users\SEDY\.nuget\packages\mono.webassembly.interop\0.7.0\lib\netstandard2.0\Mono.WebAssembly.Interop.dll
-C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\bin\Debug\CrossAndCircle.GameEngine.dll
+C:\CODE\CrossAndCircleGame\src\CrossAndCircle.GameEngine\bin\Debug\CrossAndCircle.GameEngine.dll

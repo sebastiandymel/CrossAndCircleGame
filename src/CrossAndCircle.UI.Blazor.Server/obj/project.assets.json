@@ -12074,11 +12074,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CODE\\GIT-SEDY\\DotNet\\CrossAndCircleGame\\CrossAndCircle.UI.Blazor.Server\\CrossAndCircle.UI.Blazor.Server.csproj",
+      "projectUniqueName": "C:\\CODE\\CrossAndCircleGame\\src\\CrossAndCircle.UI.Blazor.Server\\CrossAndCircle.UI.Blazor.Server.csproj",
       "projectName": "CrossAndCircle.UI.Blazor.Server",
-      "projectPath": "C:\\CODE\\GIT-SEDY\\DotNet\\CrossAndCircleGame\\CrossAndCircle.UI.Blazor.Server\\CrossAndCircle.UI.Blazor.Server.csproj",
+      "projectPath": "C:\\CODE\\CrossAndCircleGame\\src\\CrossAndCircle.UI.Blazor.Server\\CrossAndCircle.UI.Blazor.Server.csproj",
       "packagesPath": "C:\\Users\\SEDY\\.nuget\\packages\\",
-      "outputPath": "C:\\CODE\\GIT-SEDY\\DotNet\\CrossAndCircleGame\\CrossAndCircle.UI.Blazor.Server\\obj\\",
+      "outputPath": "C:\\CODE\\CrossAndCircleGame\\src\\CrossAndCircle.UI.Blazor.Server\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12097,8 +12097,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\CODE\\GIT-SEDY\\DotNet\\CrossAndCircleGame\\CrossAndCircle.UI.Blazor.App\\CrossAndCircle.UI.Blazor.App.csproj": {
-              "projectPath": "C:\\CODE\\GIT-SEDY\\DotNet\\CrossAndCircleGame\\CrossAndCircle.UI.Blazor.App\\CrossAndCircle.UI.Blazor.App.csproj"
+            "C:\\CODE\\CrossAndCircleGame\\src\\CrossAndCircle.UI.Blazor.App\\CrossAndCircle.UI.Blazor.App.csproj": {
+              "projectPath": "C:\\CODE\\CrossAndCircleGame\\src\\CrossAndCircle.UI.Blazor.App\\CrossAndCircle.UI.Blazor.App.csproj"
             }
           }
         }

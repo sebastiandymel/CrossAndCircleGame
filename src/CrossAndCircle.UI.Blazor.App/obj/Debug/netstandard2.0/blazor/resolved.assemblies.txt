@@ -1,4 +1,4 @@
-C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.UI.Blazor.App\obj\Debug\netstandard2.0\CrossAndCircle.UI.Blazor.App.dll
+C:\CODE\CrossAndCircleGame\src\CrossAndCircle.UI.Blazor.App\obj\Debug\netstandard2.0\CrossAndCircle.UI.Blazor.App.dll
 C:\Users\SEDY\.nuget\packages\microsoft.aspnetcore.blazor\0.7.0\lib\netstandard2.0\Microsoft.AspNetCore.Blazor.dll
 C:\Users\SEDY\.nuget\packages\microsoft.jsinterop\0.7.0\lib\netstandard2.0\Microsoft.JSInterop.dll
 C:\Users\SEDY\.nuget\packages\microsoft.aspnetcore.blazor.build\0.7.0\targets\../tools/mono/bcl/Facades/netstandard.dll
@@ -23,6 +23,6 @@ C:\Users\SEDY\.nuget\packages\microsoft.extensions.dependencyinjection.abstracti
 C:\Users\SEDY\.nuget\packages\microsoft.aspnetcore.blazor.browser\0.7.0\lib\netstandard2.0\Microsoft.AspNetCore.Blazor.Browser.dll
 C:\Users\SEDY\.nuget\packages\mono.webassembly.interop\0.7.0\lib\netstandard2.0\Mono.WebAssembly.Interop.dll
 C:\Users\SEDY\.nuget\packages\microsoft.extensions.dependencyinjection\2.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.dll
-C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\bin\Debug\CrossAndCircle.GameEngine.dll
-C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.UI.Blazor.App\obj\Debug\netstandard2.0\CrossAndCircle.UI.Blazor.App.pdb
-C:\CODE\GIT-SEDY\DotNet\CrossAndCircleGame\CrossAndCircle.GameEngine\bin\Debug\CrossAndCircle.GameEngine.pdb
+C:\CODE\CrossAndCircleGame\src\CrossAndCircle.GameEngine\bin\Debug\CrossAndCircle.GameEngine.dll
+C:\CODE\CrossAndCircleGame\src\CrossAndCircle.UI.Blazor.App\obj\Debug\netstandard2.0\CrossAndCircle.UI.Blazor.App.pdb
+C:\CODE\CrossAndCircleGame\src\CrossAndCircle.GameEngine\bin\Debug\CrossAndCircle.GameEngine.pdb
